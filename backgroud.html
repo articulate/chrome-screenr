@@ -7,7 +7,7 @@
 		 		
 		chrome.extension.onRequest.addListener(function(request, sender, callback) {
 		  var tabId = request.tabId;
-		  chrome.tabs.executeScript(tabId, { file: "content.js" }, function() { console.log('callback');});
+		  chrome.tabs.executeScript(tabId, { file: "content.js" });
 		  });
 		
 		

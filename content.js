@@ -20,10 +20,13 @@ function insertScreenrEmbed(link) {
 	iframe.insertAfter(link);
 }
 
- var screencasts = $("a:regex(href, viewscreencasts.com/[a-z0-9-])");
+if (window.location.href.indexOf(".viewscreencasts.com") == -1) {
+
+	var screencasts = $("a:regex(href, viewscreencasts.com/[a-z0-9-])");
  
- for (var i=0;i < screencasts.length; i++) {
-	insertScreenrEmbed(screencasts[i]);
+	 for (var i=0;i < screencasts.length; i++) {
+		insertScreenrEmbed(screencasts[i]);
+	 }
  }
 	
 	
