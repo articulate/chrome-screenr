@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<script>
+		
+		
+		 		
+		chrome.extension.onRequest.addListener(function(request, sender, callback) {
+		  var tabId = request.tabId;
+		  chrome.tabs.executeScript(tabId, { file: "content.js" }, function() { console.log('callback');});
+		  });
+		
+		
+		
+	</script>
+  </head>
+</html>
