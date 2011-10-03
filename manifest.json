@@ -12,6 +12,6 @@
   ],
   "content_scripts":[{
 	"matches": ["http://*/*", "https://*/*"],
-	"js":["jquery.min.js","content.js"]
+	"js":["jquery.min.js","jquery.ba-throttle-debounce.js","content.js"]
   }]
 }
